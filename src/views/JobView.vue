@@ -3,6 +3,7 @@ import { onMounted, reactive } from "vue";
 import PulseLoader from "vue-spinner/src/PulseLoader.vue";
 import axios from "axios";
 import { RouterLink, useRoute } from "vue-router";
+import BackButton from "@/components/BackButton.vue";
 
 const route = useRoute();
 
@@ -28,6 +29,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  <BackButton />
   <!-- Show loading spinner while loading is true -->
   <div v-if="state.isLoading" class="py-6 text-center text-gray-500">
     <PulseLoader />
